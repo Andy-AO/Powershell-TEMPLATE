@@ -17,17 +17,7 @@
 	$previousColour = [System.Console]::ForegroundColor
 	
 	# Set the appropriate foreground text colour.
-	switch ($Colour)
-	{
-		"Red" 		{ [System.Console]::ForegroundColor = [System.ConsoleColor]::Red }
-		"Green" 	{ [System.Console]::ForegroundColor = [System.ConsoleColor]::Green }
-		"Blue" 		{ [System.Console]::ForegroundColor = [System.ConsoleColor]::Blue }
-		"Cyan" 		{ [System.Console]::ForegroundColor = [System.ConsoleColor]::Cyan }
-		"Magenta" 	{ [System.Console]::ForegroundColor = [System.ConsoleColor]::Magenta }
-		"Yellow" 	{ [System.Console]::ForegroundColor = [System.ConsoleColor]::Yellow }
-		"Bold" 		{ [System.Console]::ForegroundColor = [System.ConsoleColor]::White }
-		"Black" 	{ [System.Console]::ForegroundColor = [System.ConsoleColor]::Black }
-	}
+  	Invoke-Expression -Command "[System.Console]::ForegroundColor = [System.ConsoleColor]::$Colour"
 	
 	# Add some extra spacing to either side of the message.
 	$length = $Message.Length + 2
