@@ -20,10 +20,7 @@ function WriteHeader
 	
 	function WriteBorder($remark){
 		$HelpMessage += "+"
-		for ($i = 0; $i -lt $length; $i++)
-		{
-			$HelpMessage += "-"
-		}
+		$HelpMessage += ("-" * $length)
 		$HelpMessage += "+$([Environment]::NewLine)" 
 	}
 
