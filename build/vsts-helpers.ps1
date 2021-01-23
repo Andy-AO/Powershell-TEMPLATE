@@ -8,7 +8,7 @@ function WriteHeader
 		
 		[Parameter(Position = 1)]
 		[string]
-		[ValidateSet("Red", "Green", "Blue", "Cyan", "Magenta", "Yellow", "Bold", "Black")]
+		[ValidateSet("Red", "Green", "Blue", "Cyan", "Magenta", "Yellow", "white", "Black")]
 		$Colour
 	)
 	
